@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/"
+     xml:base="http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:medieval-mini="https://example.org/medieval-mini#">
+    <owl:Ontology rdf:about="https://example.org/medieval-mini"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/medieval-mini#bornIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#bornIn">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#locatedIn">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#marriedTo -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#marriedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#occuredIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#occuredIn">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#producedIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#producedIn">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Manuscript"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#ruledTerritory -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#ruledTerritory">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/medieval-mini#HistoricalEvent -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#HistoricalEvent"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#Manuscript -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Manuscript"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#Person -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Person"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#Place -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Place"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#PoliticalTerritory -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#PoliticalTerritory"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/medieval-mini#battleOfHastings -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#battleOfHastings">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+        <medieval-mini:occuredIn rdf:resource="https://example.org/medieval-mini#hastings"/>
+        <rdfs:label xml:lang="en">Battle of Hastings</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#domesdayBook -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#domesdayBook">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Manuscript"/>
+        <medieval-mini:producedIn rdf:resource="https://example.org/medieval-mini#england"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#england -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#england">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#falaise -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#falaise">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
+        <medieval-mini:locatedIn rdf:resource="https://example.org/medieval-mini#normandy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#hastings -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#hastings">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
+        <medieval-mini:locatedIn rdf:resource="https://example.org/medieval-mini#england"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#henryI -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#henryI">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#matildaOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#normandy -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#normandy">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#williamI -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#williamI">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#falaise"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

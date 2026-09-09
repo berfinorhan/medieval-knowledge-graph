@@ -204,6 +204,7 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#domesdayBook">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Manuscript"/>
         <medieval-mini:producedIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <rdfs:label xml:lang="en">Domesday Book</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -212,6 +213,7 @@
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#england">
         <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">England</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -221,6 +223,7 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#falaise">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
         <medieval-mini:locatedIn rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <rdfs:label xml:lang="en">Falaise</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -230,6 +233,7 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#hastings">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
         <medieval-mini:locatedIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <rdfs:label xml:lang="en">Hasting</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -240,6 +244,7 @@
         <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
         <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#england"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
+        <rdfs:label xml:lang="en">Henry I of England</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -248,6 +253,7 @@
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfFlanders">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:label xml:lang="en">Matilda of Flanders</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -256,6 +262,7 @@
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#normandy">
         <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">Normandy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -268,6 +275,7 @@
         <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <rdfs:label xml:lang="en">William I of England</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

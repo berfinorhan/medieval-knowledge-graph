@@ -22,21 +22,27 @@
     
 
 
+    <!-- https://example.org/medieval-mini#birthplaceOf -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#birthplaceOf">
+        <owl:inverseOf rdf:resource="https://example.org/medieval-mini#bornIn"/>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Place"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://example.org/medieval-mini#bornIn -->
 
-    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#bornIn">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
-            </owl:Restriction>
-        </rdfs:range>
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#bornIn"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#heldTitle -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#heldTitle">
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Title"/>
     </owl:ObjectProperty>
     
 
@@ -44,18 +50,8 @@
     <!-- https://example.org/medieval-mini#locatedIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#locatedIn">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
-            </owl:Restriction>
-        </rdfs:range>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Place"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
     </owl:ObjectProperty>
     
 
@@ -64,37 +60,35 @@
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#marriedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
-            </owl:Restriction>
-        </rdfs:range>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://example.org/medieval-mini#occuredIn -->
+    <!-- https://example.org/medieval-mini#memberOfDynasty -->
 
-    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#occuredIn">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Place"/>
-            </owl:Restriction>
-        </rdfs:range>
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#memberOfDynasty">
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#occurredIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#occurredIn">
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#participatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#participatedIn">
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
     </owl:ObjectProperty>
     
 
@@ -102,18 +96,8 @@
     <!-- https://example.org/medieval-mini#producedIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#producedIn">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Manuscript"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
-            </owl:Restriction>
-        </rdfs:range>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Manuscript"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
     </owl:ObjectProperty>
     
 
@@ -121,18 +105,17 @@
     <!-- https://example.org/medieval-mini#ruledTerritory -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#ruledTerritory">
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#Person"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://example.org/medieval-mini#bornIn"/>
-                <owl:someValuesFrom rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
-            </owl:Restriction>
-        </rdfs:range>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#writtenInLanguage -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#writtenInLanguage">
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Manuscript"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Language"/>
     </owl:ObjectProperty>
     
 
@@ -148,9 +131,37 @@
     
 
 
+    <!-- https://example.org/medieval-mini#Battle -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Battle">
+        <rdfs:subClassOf rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/medieval-mini#Dynasty -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Dynasty"/>
+    
+
+
     <!-- https://example.org/medieval-mini#HistoricalEvent -->
 
     <owl:Class rdf:about="https://example.org/medieval-mini#HistoricalEvent"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#King -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#King">
+        <rdfs:subClassOf rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/medieval-mini#Language -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Language"/>
     
 
 
@@ -174,7 +185,29 @@
 
     <!-- https://example.org/medieval-mini#PoliticalTerritory -->
 
-    <owl:Class rdf:about="https://example.org/medieval-mini#PoliticalTerritory"/>
+    <owl:Class rdf:about="https://example.org/medieval-mini#PoliticalTerritory">
+        <rdfs:subClassOf rdf:resource="https://example.org/medieval-mini#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/medieval-mini#Queen -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Queen">
+        <rdfs:subClassOf rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/medieval-mini#ReligiousInstitution -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#ReligiousInstitution"/>
+    
+
+
+    <!-- https://example.org/medieval-mini#Title -->
+
+    <owl:Class rdf:about="https://example.org/medieval-mini#Title"/>
     
 
 
@@ -193,8 +226,16 @@
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#battleOfHastings">
         <rdf:type rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
-        <medieval-mini:occuredIn rdf:resource="https://example.org/medieval-mini#hastings"/>
         <rdfs:label xml:lang="en">Battle of Hastings</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#battleOfTinchebray -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#battleOfTinchebray">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+        <rdfs:label xml:lang="en">Battle of Tinchebray</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -243,6 +284,7 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#henryI">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
         <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#matildaOfScotland"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
         <rdfs:label xml:lang="en">Henry I of England</rdfs:label>
     </owl:NamedIndividual>
@@ -254,6 +296,15 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfFlanders">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:label xml:lang="en">Matilda of Flanders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#matildaOfScotland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfScotland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:label xml:lang="en">Matilda of Scotland</rdfs:label>
     </owl:NamedIndividual>
     
 

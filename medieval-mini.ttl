@@ -1,0 +1,218 @@
+@prefix : <http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix medieval-mini: <https://example.org/medieval-mini#> .
+@base <http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/> .
+
+<https://example.org/medieval-mini> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://example.org/medieval-mini#birthplaceOf
+medieval-mini:birthplaceOf rdf:type owl:ObjectProperty ;
+                           owl:inverseOf medieval-mini:bornIn ;
+                           rdfs:domain medieval-mini:Place ;
+                           rdfs:range medieval-mini:Person .
+
+
+###  https://example.org/medieval-mini#bornIn
+medieval-mini:bornIn rdf:type owl:ObjectProperty .
+
+
+###  https://example.org/medieval-mini#heldTitle
+medieval-mini:heldTitle rdf:type owl:ObjectProperty ;
+                        rdfs:domain medieval-mini:Person ;
+                        rdfs:range medieval-mini:Title .
+
+
+###  https://example.org/medieval-mini#locatedIn
+medieval-mini:locatedIn rdf:type owl:ObjectProperty ;
+                        rdfs:domain medieval-mini:Place ;
+                        rdfs:range medieval-mini:Place .
+
+
+###  https://example.org/medieval-mini#marriedTo
+medieval-mini:marriedTo rdf:type owl:ObjectProperty ,
+                                 owl:SymmetricProperty ;
+                        rdfs:domain medieval-mini:Person ;
+                        rdfs:range medieval-mini:Person .
+
+
+###  https://example.org/medieval-mini#memberOfDynasty
+medieval-mini:memberOfDynasty rdf:type owl:ObjectProperty ;
+                              rdfs:domain medieval-mini:Person ;
+                              rdfs:range medieval-mini:Dynasty .
+
+
+###  https://example.org/medieval-mini#occurredIn
+medieval-mini:occurredIn rdf:type owl:ObjectProperty ;
+                         rdfs:domain medieval-mini:HistoricalEvent ;
+                         rdfs:range medieval-mini:Place .
+
+
+###  https://example.org/medieval-mini#participatedIn
+medieval-mini:participatedIn rdf:type owl:ObjectProperty ;
+                             rdfs:domain medieval-mini:Person ;
+                             rdfs:range medieval-mini:HistoricalEvent .
+
+
+###  https://example.org/medieval-mini#producedIn
+medieval-mini:producedIn rdf:type owl:ObjectProperty ;
+                         rdfs:domain medieval-mini:Manuscript ;
+                         rdfs:range medieval-mini:Place .
+
+
+###  https://example.org/medieval-mini#ruledTerritory
+medieval-mini:ruledTerritory rdf:type owl:ObjectProperty ;
+                             rdfs:domain medieval-mini:Person ;
+                             rdfs:range medieval-mini:PoliticalTerritory .
+
+
+###  https://example.org/medieval-mini#writtenInLanguage
+medieval-mini:writtenInLanguage rdf:type owl:ObjectProperty ;
+                                rdfs:domain medieval-mini:Manuscript ;
+                                rdfs:range medieval-mini:Language .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://example.org/medieval-mini#Battle
+medieval-mini:Battle rdf:type owl:Class ;
+                     rdfs:subClassOf medieval-mini:HistoricalEvent .
+
+
+###  https://example.org/medieval-mini#Dynasty
+medieval-mini:Dynasty rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#HistoricalEvent
+medieval-mini:HistoricalEvent rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#King
+medieval-mini:King rdf:type owl:Class ;
+                   rdfs:subClassOf medieval-mini:Person .
+
+
+###  https://example.org/medieval-mini#Language
+medieval-mini:Language rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#Manuscript
+medieval-mini:Manuscript rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#Person
+medieval-mini:Person rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#Place
+medieval-mini:Place rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#PoliticalTerritory
+medieval-mini:PoliticalTerritory rdf:type owl:Class ;
+                                 rdfs:subClassOf medieval-mini:Place .
+
+
+###  https://example.org/medieval-mini#Queen
+medieval-mini:Queen rdf:type owl:Class ;
+                    rdfs:subClassOf medieval-mini:Person .
+
+
+###  https://example.org/medieval-mini#ReligiousInstitution
+medieval-mini:ReligiousInstitution rdf:type owl:Class .
+
+
+###  https://example.org/medieval-mini#Title
+medieval-mini:Title rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/medieval-mini#battleOfHastings
+medieval-mini:battleOfHastings rdf:type owl:NamedIndividual ,
+                                        medieval-mini:HistoricalEvent ;
+                               rdfs:label "Battle of Hastings"@en .
+
+
+###  https://example.org/medieval-mini#battleOfTinchebray
+medieval-mini:battleOfTinchebray rdf:type owl:NamedIndividual ,
+                                          medieval-mini:HistoricalEvent ;
+                                 rdfs:label "Battle of Tinchebray"@en .
+
+
+###  https://example.org/medieval-mini#domesdayBook
+medieval-mini:domesdayBook rdf:type owl:NamedIndividual ,
+                                    medieval-mini:Manuscript ;
+                           medieval-mini:producedIn medieval-mini:england ;
+                           rdfs:label "Domesday Book"@en .
+
+
+###  https://example.org/medieval-mini#england
+medieval-mini:england rdf:type owl:NamedIndividual ,
+                               medieval-mini:PoliticalTerritory ;
+                      rdfs:label "England"@en .
+
+
+###  https://example.org/medieval-mini#falaise
+medieval-mini:falaise rdf:type owl:NamedIndividual ,
+                               medieval-mini:Place ;
+                      medieval-mini:locatedIn medieval-mini:normandy ;
+                      rdfs:label "Falaise"@en .
+
+
+###  https://example.org/medieval-mini#hastings
+medieval-mini:hastings rdf:type owl:NamedIndividual ,
+                                medieval-mini:Place ;
+                       medieval-mini:locatedIn medieval-mini:england ;
+                       rdfs:label "Hasting"@en .
+
+
+###  https://example.org/medieval-mini#henryI
+medieval-mini:henryI rdf:type owl:NamedIndividual ,
+                              medieval-mini:Person ;
+                     medieval-mini:bornIn medieval-mini:england ;
+                     medieval-mini:marriedTo medieval-mini:matildaOfScotland ;
+                     medieval-mini:ruledTerritory medieval-mini:england ;
+                     rdfs:label "Henry I of England"@en .
+
+
+###  https://example.org/medieval-mini#matildaOfFlanders
+medieval-mini:matildaOfFlanders rdf:type owl:NamedIndividual ,
+                                         medieval-mini:Person ;
+                                rdfs:label "Matilda of Flanders"@en .
+
+
+###  https://example.org/medieval-mini#matildaOfScotland
+medieval-mini:matildaOfScotland rdf:type owl:NamedIndividual ,
+                                         medieval-mini:Person ;
+                                rdfs:label "Matilda of Scotland"@en .
+
+
+###  https://example.org/medieval-mini#normandy
+medieval-mini:normandy rdf:type owl:NamedIndividual ,
+                                medieval-mini:PoliticalTerritory ;
+                       rdfs:label "Normandy"@en .
+
+
+###  https://example.org/medieval-mini#williamI
+medieval-mini:williamI rdf:type owl:NamedIndividual ,
+                                medieval-mini:Person ;
+                       medieval-mini:bornIn medieval-mini:falaise ;
+                       medieval-mini:marriedTo medieval-mini:matildaOfFlanders ;
+                       medieval-mini:ruledTerritory medieval-mini:england ,
+                                                    medieval-mini:normandy ;
+                       rdfs:label "William I of England"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

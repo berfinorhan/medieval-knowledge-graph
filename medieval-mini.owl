@@ -26,6 +26,7 @@
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#birthplaceOf">
         <owl:inverseOf rdf:resource="https://example.org/medieval-mini#bornIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Place"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
     </owl:ObjectProperty>
@@ -34,13 +35,37 @@
 
     <!-- https://example.org/medieval-mini#bornIn -->
 
-    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#bornIn"/>
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#bornIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#childOf -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#childOf">
+        <rdfs:subPropertyOf rdf:resource="https://example.org/medieval-mini#descendantOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#descendantOf -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#descendantOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://example.org/medieval-mini#heldTitle -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#heldTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Title"/>
     </owl:ObjectProperty>
@@ -50,6 +75,7 @@
     <!-- https://example.org/medieval-mini#locatedIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Place"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
     </owl:ObjectProperty>
@@ -60,6 +86,7 @@
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#marriedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
     </owl:ObjectProperty>
@@ -69,6 +96,7 @@
     <!-- https://example.org/medieval-mini#memberOfDynasty -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#memberOfDynasty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Dynasty"/>
     </owl:ObjectProperty>
@@ -78,6 +106,7 @@
     <!-- https://example.org/medieval-mini#occurredIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#occurredIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
     </owl:ObjectProperty>
@@ -87,6 +116,7 @@
     <!-- https://example.org/medieval-mini#participatedIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#participatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
     </owl:ObjectProperty>
@@ -96,6 +126,7 @@
     <!-- https://example.org/medieval-mini#producedIn -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#producedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Manuscript"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Place"/>
     </owl:ObjectProperty>
@@ -105,8 +136,20 @@
     <!-- https://example.org/medieval-mini#ruledTerritory -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#ruledTerritory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/medieval-mini#siblingOf -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#siblingOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdfs:range rdf:resource="https://example.org/medieval-mini#Person"/>
     </owl:ObjectProperty>
     
 
@@ -114,6 +157,7 @@
     <!-- https://example.org/medieval-mini#writtenInLanguage -->
 
     <owl:ObjectProperty rdf:about="https://example.org/medieval-mini#writtenInLanguage">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://example.org/medieval-mini#Manuscript"/>
         <rdfs:range rdf:resource="https://example.org/medieval-mini#Language"/>
     </owl:ObjectProperty>
@@ -222,10 +266,38 @@
     
 
 
+    <!-- https://example.org/medieval-mini#adelaOfFrance -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#adelaOfFrance">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#france"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#countessConsortOfFlanders"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#duchessConsortOfNormandy"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfCapet"/>
+        <rdfs:label xml:lang="en">Adela of France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#baldwinVOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#baldwinVOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#countyOfFlanders"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#countOfFlanders"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#adelaOfFrance"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfFlanders"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#countyOfFlanders"/>
+        <rdfs:label xml:lang="en">Baldwin V of Flanders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://example.org/medieval-mini#battleOfHastings -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#battleOfHastings">
-        <rdf:type rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Battle"/>
+        <medieval-mini:occurredIn rdf:resource="https://example.org/medieval-mini#hastings"/>
         <rdfs:label xml:lang="en">Battle of Hastings</rdfs:label>
     </owl:NamedIndividual>
     
@@ -235,7 +307,35 @@
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#battleOfTinchebray">
         <rdf:type rdf:resource="https://example.org/medieval-mini#HistoricalEvent"/>
+        <medieval-mini:occurredIn rdf:resource="https://example.org/medieval-mini#tinchebray"/>
         <rdfs:label xml:lang="en">Battle of Tinchebray</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#countOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#countOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Count of Flanders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#countessConsortOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#countessConsortOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Countess Consort of Flanders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#countyOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#countyOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">County of Flanders</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -245,7 +345,35 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#domesdayBook">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Manuscript"/>
         <medieval-mini:producedIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:writtenInLanguage rdf:resource="https://example.org/medieval-mini#latinLanguage"/>
         <rdfs:label xml:lang="en">Domesday Book</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#duchessConsortOfNormandy -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#duchessConsortOfNormandy">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Duchess Consort of Normandy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#dukeOfNormandy -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#dukeOfNormandy">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Duke of Normandy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#dunkeld -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#dunkeld">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+        <rdfs:label xml:lang="en">House of Dunkeld</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -255,6 +383,15 @@
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#england">
         <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
         <rdfs:label xml:lang="en">England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#englishLanguage -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#englishLanguage">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Language"/>
+        <rdfs:label xml:lang="en">English Language</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -269,12 +406,21 @@
     
 
 
+    <!-- https://example.org/medieval-mini#france -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#france">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">France</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://example.org/medieval-mini#hastings -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#hastings">
         <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
         <medieval-mini:locatedIn rdf:resource="https://example.org/medieval-mini#england"/>
-        <rdfs:label xml:lang="en">Hasting</rdfs:label>
+        <rdfs:label xml:lang="en">Hastings</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -282,11 +428,116 @@
     <!-- https://example.org/medieval-mini#henryI -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#henryI">
-        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdf:type rdf:resource="https://example.org/medieval-mini#King"/>
         <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#williamI"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#dukeOfNormandy"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#kingOfEngland"/>
         <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#matildaOfScotland"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfNormandy"/>
+        <medieval-mini:participatedIn rdf:resource="https://example.org/medieval-mini#battleOfTinchebray"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
         <rdfs:label xml:lang="en">Henry I of England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#houseOfCapet -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#houseOfCapet">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+        <rdfs:label xml:lang="en">House of Capet</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#houseOfFlanders -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#houseOfFlanders">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+        <rdfs:label xml:lang="en">House of Flanders</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#houseOfNormandy -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#houseOfNormandy">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+        <rdfs:label xml:lang="en">House of Normandy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#houseOfWessex -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#houseOfWessex">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Dynasty"/>
+        <rdfs:label xml:lang="en">House of Wessex</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#kingOfEngland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#kingOfEngland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label>King of England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#kingOfScots -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#kingOfScots">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">King of Scots</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#kingdomOfHungary -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#kingdomOfHungary">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">Kingdom of Hungary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#latinLanguage -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#latinLanguage">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Language"/>
+        <rdfs:label xml:lang="en">Latin Language</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#malcolmOfScotland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#malcolmOfScotland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#King"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#scotland"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#kingOfScots"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#margaretOfWessex"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#dunkeld"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#scotland"/>
+        <rdfs:label xml:lang="en">Malcolm III of Scotland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#margaretOfWessex -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#margaretOfWessex">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Queen"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#kingdomOfHungary"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#queenConsortOfScots"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfWessex"/>
+        <rdfs:label xml:lang="en">Margaret of Wessex</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -294,7 +545,14 @@
     <!-- https://example.org/medieval-mini#matildaOfFlanders -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfFlanders">
-        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Queen"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#countyOfFlanders"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#adelaOfFrance"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#baldwinVOfFlanders"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#duchessConsortOfNormandy"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#queenConsortOfEngland"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#williamI"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfFlanders"/>
         <rdfs:label xml:lang="en">Matilda of Flanders</rdfs:label>
     </owl:NamedIndividual>
     
@@ -303,7 +561,14 @@
     <!-- https://example.org/medieval-mini#matildaOfScotland -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#matildaOfScotland">
-        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Queen"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#scotland"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#malcolmOfScotland"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#margaretOfWessex"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#duchessConsortOfNormandy"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#queenConsortOfEngland"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#henryI"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#dunkeld"/>
         <rdfs:label xml:lang="en">Matilda of Scotland</rdfs:label>
     </owl:NamedIndividual>
     
@@ -318,15 +583,101 @@
     
 
 
+    <!-- https://example.org/medieval-mini#queenConsortOfEngland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#queenConsortOfEngland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Queen Consort of England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#queenConsortOfScots -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#queenConsortOfScots">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Title"/>
+        <rdfs:label xml:lang="en">Queen Consort of Scots</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#richardIIIOfNormandy -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#richardIIIOfNormandy">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#dukeOfNormandy"/>
+        <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#adelaOfFrance"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfNormandy"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <rdfs:label xml:lang="en">Richard III of Normandy</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#robertCurthose -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#robertCurthose">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#williamI"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#dukeOfNormandy"/>
+        <medieval-mini:participatedIn rdf:resource="https://example.org/medieval-mini#battleOfTinchebray"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <rdfs:label xml:lang="en">Robert Curthose</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#scotland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#scotland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#PoliticalTerritory"/>
+        <rdfs:label xml:lang="en">Scotland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#tinchebray -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#tinchebray">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#Place"/>
+        <rdfs:label xml:lang="en">Tinchebray</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://example.org/medieval-mini#williamI -->
 
     <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#williamI">
-        <rdf:type rdf:resource="https://example.org/medieval-mini#Person"/>
+        <rdf:type rdf:resource="https://example.org/medieval-mini#King"/>
         <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#falaise"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#dukeOfNormandy"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#kingOfEngland"/>
         <medieval-mini:marriedTo rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfNormandy"/>
+        <medieval-mini:participatedIn rdf:resource="https://example.org/medieval-mini#battleOfHastings"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
         <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#normandy"/>
         <rdfs:label xml:lang="en">William I of England</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/medieval-mini#williamRufusOfEngland -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/medieval-mini#williamRufusOfEngland">
+        <rdf:type rdf:resource="https://example.org/medieval-mini#King"/>
+        <medieval-mini:bornIn rdf:resource="https://example.org/medieval-mini#normandy"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#matildaOfFlanders"/>
+        <medieval-mini:childOf rdf:resource="https://example.org/medieval-mini#williamI"/>
+        <medieval-mini:heldTitle rdf:resource="https://example.org/medieval-mini#kingOfEngland"/>
+        <medieval-mini:memberOfDynasty rdf:resource="https://example.org/medieval-mini#houseOfNormandy"/>
+        <medieval-mini:ruledTerritory rdf:resource="https://example.org/medieval-mini#england"/>
+        <medieval-mini:siblingOf rdf:resource="https://example.org/medieval-mini#henryI"/>
+        <medieval-mini:siblingOf rdf:resource="https://example.org/medieval-mini#robertCurthose"/>
+        <rdfs:label xml:lang="en">William II of England (William Rufus)</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 

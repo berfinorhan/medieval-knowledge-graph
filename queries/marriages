@@ -1,0 +1,12 @@
+PREFIX medieval: <https://example.org/medieval-mini#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person1Name ?person2Name
+WHERE {
+    ?person1 medieval:marriedTo ?person2;
+        rdfs:label ?person1Name .
+
+    ?person2 rdfs:label ?person2Name .
+
+    FILTER (?person1 < ?person2)
+}

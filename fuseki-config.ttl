@@ -1,0 +1,28 @@
+@prefix :        <#> .
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+
+# 1. Define the Fuseki Service
+:service_medieval a fuseki:Service ;
+    fuseki:name                       "medieval" ;
+    fuseki:serviceQuery               "query" , "sparql" ;
+    fuseki:serviceUpdate              "update" ;
+    fuseki:serviceUpload              "upload" ;
+    fuseki:serviceReadGraphStore      "get" ;
+    fuseki:serviceReadWriteGraphStore "data" ;
+    fuseki:dataset                    :dataset_inf .
+
+# 2. Define the Inference Dataset
+:dataset_inf a ja:RDFDataset ;
+    ja:defaultGraph :model_inf .
+
+# 3. Attach the OWL Reasoner
+:model_inf a ja:InferenceModel ;
+    ja:reasoner [ ja:reasonerURL <http://jena.hpl.hp.com/2003/OWLFBRuleReasoner> ] ;
+    ja:baseModel :graph_base .
+
+# 4. Point to your local Turtle file
+:graph_base a ja:MemoryModel ;
+    ja:content [ ja:externalContent <file:medieval-mini.ttl> ] .

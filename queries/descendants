@@ -1,0 +1,11 @@
+PREFIX medieval: <https://example.org/medieval-mini#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?ancestorName ?descendantName
+WHERE {
+    ?ancestor a medieval:Person ;
+        rdfs:label ?ancestorName .
+    ?person a medieval:Person ;
+        medieval:descendantOf ?ancestor ;
+        rdfs:label ?descendantName .
+}

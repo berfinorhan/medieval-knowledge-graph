@@ -1,0 +1,10 @@
+PREFIX medieval: <https://example.org/medieval-mini#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?personName ?placeName
+WHERE {
+    ?person a medieval:King ;
+        medieval:bornIn ?place ;
+        rdfs:label ?personName .
+    ?place rdfs:label ?placeName .
+}

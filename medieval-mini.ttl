@@ -1,11 +1,11 @@
-@prefix : <http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/> .
+@prefix : <https://example.org/medieval-mini#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix medieval-mini: <https://example.org/medieval-mini#> .
-@base <http://www.semanticweb.ohttps://example.org/medieval-minirg/berfinorhan/ontologies/2026/8/untitled-ontology-2/> .
+@base <https://example.org/medieval-mini#> .
 
 <https://example.org/medieval-mini> rdf:type owl:Ontology .
 
@@ -417,9 +417,7 @@ medieval-mini:richardIIIOfNormandy rdf:type owl:NamedIndividual ,
                                             medieval-mini:Person ;
                                    medieval-mini:bornIn medieval-mini:normandy ;
                                    medieval-mini:heldTitle medieval-mini:dukeOfNormandy ;
-                                   medieval-mini:marriedTo medieval-mini:adelaOfFrance ;
                                    medieval-mini:memberOfDynasty medieval-mini:houseOfNormandy ;
-                                   medieval-mini:ruledTerritory medieval-mini:normandy ;
                                    rdfs:label "Richard III of Normandy"@en .
 
 

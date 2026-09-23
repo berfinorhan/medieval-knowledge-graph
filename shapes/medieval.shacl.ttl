@@ -1,0 +1,35 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix medieval: <https://example.org/medieval-mini#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Rule 1: Validate King Entities
+medieval:KingShape a sh:NodeShape ;
+    sh:targetClass medieval:King ;
+
+    # Must have at least 1 rdfs:label
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:message "A King must have at least one label." ;
+    ] ;
+
+    # Must have exactly 1 birthplace
+    sh:property [
+        sh:path medieval:bornIn ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A King must have exactly one birthplace (medieval:bornIn)." ;
+    ] .
+
+# Rule 2: Validate childOf target values
+
+medieval:ChildOfShape a sh:NodeShape ;
+    sh:targetClass medieval:Person ;
+
+    # Any childOf relationship must point to another Person
+    sh:property [
+        sh:path medieval:childOf ;
+        sh:class medieval:Person ;
+        sh:message "The target of childOf must be a medieval:Person." ;
+    ] .
